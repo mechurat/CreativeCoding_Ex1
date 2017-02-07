@@ -28,11 +28,43 @@ void setup() { // Set up the screen
   // upper left
   quad( width/2-130, height/2+40, 200, 450, 150, 400, width/2-130, height/2+10 );
   
+  // lower right arm
+  quad( 600, 450, 660, 450, 700, 550, 640, 550 ); // up|left, up|right, low|right, low|left
+  // lower left arm
+  quad( 200, 450, 140, 450, 100, 550, 160, 550 ); // up|right, up|left, low|left, low|right
+  
   fill( darkSkin );
   // right shoulder
   ellipse( width/2+130, height/2+40, 80, 80 );
   // left shoulder
   ellipse( width/2-130, height/2+40, 80, 80 );
+  
+  // mid right arm
+  triangle( 595, 455, 650, 395, 665, 455 ); // leftC, upper, rightC
+  // mid left arm
+  triangle( 205, 455, 150, 395, 135, 455 ); // rightC, upper, leftC
+  
+  // hands/feet
+  // right hand
+  arc( 675, 570, 100, 60, PI, TWO_PI, CHORD );
+  // left hand
+  arc( 125, 570, 100, 60, PI, TWO_PI, CHORD );
+  // fingers
+  fill( 233, 232, 127 ); // gross yellow color
+  // left hand
+  arc( 85, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 105, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 125, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 145, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 165, 570, 20, 30, PI, TWO_PI, CHORD );
+  // right hand
+  arc( 635, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 655, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 675, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 695, 570, 20, 30, PI, TWO_PI, CHORD );
+  arc( 715, 570, 20, 30, PI, TWO_PI, CHORD );
+  
+  
 
 
   // upper ellipse of monster
